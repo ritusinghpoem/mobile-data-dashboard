@@ -345,6 +345,9 @@ html_table = """
         overflow: hidden;
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         border: 1px solid #E5E7EB;
+        max-height: 600px;
+        overflow-y: auto;
+        position: relative;
     }
     .enhanced-table {
         width: 100%;
@@ -356,7 +359,7 @@ html_table = """
         color: white;
         position: sticky;
         top: 0;
-        z-index: 10;
+        z-index: 100;
     }
     .enhanced-table th {
         padding: 18px 16px;
@@ -505,7 +508,7 @@ html_table += """
 """
 
 # Display the HTML table
-st.components.v1.html(html_table, height=600, scrolling=True)
+st.components.v1.html(html_table, height=600, scrolling=False)
 
 # Download button
 st.markdown("<br>", unsafe_allow_html=True)
